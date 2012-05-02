@@ -1,2 +1,30 @@
-This PHP class lets you easily post-process a SQL statement to add some HTML markup for easy syntax highlighting.
-Usage info to ome soon.
+SQLMarkup by Julius Schlosburg May 2012
+
+This file is part of SQLMarkup.
+
+    SQLMarkup is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SQLMarkup is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SQLMarkup.  If not, see <http://www.gnu.org/licenses/>.
+
+This PHP class lets you easily post-process a SQL statement to add some HTML markup for easy syntax highlighting. Its usage is fairly straightforward:
+
+1.) Load and create an instance of the class
+    include('<path-to-sqlMarkup.php>/sqlMarkup.php');
+    $sqlMarkerUpper = new sqlMarkup();
+
+2.) Set the statement property of your new class
+    $sqlMarkerUpper->setStatement($someSQLString);
+
+3.) Print the marked up string
+    echo $sqlMarkerUpper->getMarkedStatement();
+
+And that's it! It's pretty barebones and does NOT have all of the SQL reserved words. In addition, some of the reserved words are MySQL-specific. In the near future I hope to add the real ANSI list of SQL reserved words.

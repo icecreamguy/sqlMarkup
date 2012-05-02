@@ -24,6 +24,9 @@ This PHP class lets you easily post-process a SQL statement to add some HTML mar
 2.) Set the statement property of your new class
     $sqlMarkerUpper->setStatement($someSQLString);
 
+2.5 (optional, probably not used too often)) Turn off blank line removal
+    $sqlMarkerUpper->setBlanksClean(FALSE);
+
 3.) Print the marked up string
     echo $sqlMarkerUpper->getMarkedStatement();
 
